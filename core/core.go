@@ -14,10 +14,10 @@ import (
 )
 
 const (
-	baseAddr = "https://gw.buaa.edu.cn/srun_portal_pc"
+	baseAddr = "https://10.200.21.4"
 
 	challengeUrl = "/cgi-bin/get_challenge"
-	portalUrl    = "/cgi-bin/srun_portal"
+	portalUrl    = "/cgi-bin/srun_portal_pc"
 
 	succeedUrl = "/cgi-bin/rad_user_info"
 )
@@ -33,7 +33,8 @@ func Prepare() (int, error) {
 		return 1, err
 	}
 	target := second.Header.Get("location")
-	query, _ := url.Parse(baseAddr + target)
+	//query, _ := url.Parse(baseAddr + target)
+	query, _ := url.Parse(baseAddr)
 	return strconv.Atoi(query.Query().Get("ac_id"))
 }
 
