@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/vouv/srun/utils"
+	"github.com/ribuluolwj/srun/utils"
 )
 
 type ChallengeResp struct {
