@@ -5,6 +5,7 @@
 > An efficient client for BIT campus network
 
 北京理工大学校园网命令行登录工具
+修改适用于北航
 - 支持linux、maxOS、windows
 - 基于Go语言实现
 
