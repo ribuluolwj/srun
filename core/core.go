@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	baseAddr = "https://gw.buaa.edu.cn"
+	baseAddr = "https://gw.buaa.edu.cn/srun_portal_pc"
 
 	challengeUrl = "/cgi-bin/get_challenge"
 	portalUrl    = "/cgi-bin/srun_portal"
