@@ -4,17 +4,17 @@ import (
 	"errors"
 	"fmt"
 	log "github.com/sirupsen/logrus"
-	"github.com/vouv/srun/hash"
-	"github.com/vouv/srun/model"
-	"github.com/vouv/srun/resp"
-	"github.com/vouv/srun/utils"
+	"github.com/ribuluolwj/srun/hash"
+	"github.com/ribuluolwj/srun/model"
+	"github.com/ribuluolwj/srun/resp"
+	"github.com/ribuluolwj/srun/utils"
 	"net/url"
 	"strconv"
 	"strings"
 )
 
 const (
-	baseAddr = "http://10.0.0.55"
+	baseAddr = "http://10.200.21.4"
 
 	challengeUrl = "/cgi-bin/get_challenge"
 	portalUrl    = "/cgi-bin/srun_portal"
@@ -82,7 +82,7 @@ func Login(account *model.Account) (err error) {
 	if ra.Res != "ok" {
 		log.Debug("response msg is not 'ok'")
 		if strings.Contains(ra.ErrorMsg, "Arrearage users") {
-			err = errors.New("已欠费")
+			err = errors.New("No money!")
 		} else {
 			err = errors.New(fmt.Sprint(ra))
 		}

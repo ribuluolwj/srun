@@ -2,19 +2,19 @@ package core
 
 import "errors"
 
-var ErrFailed = errors.New("登录失败")
-var ErrConnected = errors.New("已联网")
-var ErrRequest = errors.New("请求错误")
-var ErrAcid = errors.New("当前环境只允许登录校园网")
+var ErrFailed = errors.New("Login fail")
+var ErrConnected = errors.New("Connected")
+var ErrRequest = errors.New("Wrong request")
+var ErrAcid = errors.New("School net only")
 
 var PortalError = map[string]string{
-	"E3001": "流量或时长已用尽",
+	"E3001": "Time is run out",
 	"E3002": "计费策略条件不匹配",
 	"E3003": "控制策略条件不匹配",
-	"E3004": "余额不足",
+	"E3004": "No enough money",
 	"E3005": "在线变更计费策略",
 	"E3006": "在线变更控制策略",
-	"E3007": "超时",
+	"E3007": "Outtime",
 	"E3008": "连线数超额，挤出在线表。",
 	"E3009": "有代理行为",
 	"E3010": "无流量超时",
@@ -40,13 +40,13 @@ var PortalError = map[string]string{
 	"E4122": "来自系统设置(8081)的虚拟下线",
 	"E4123": "来自后台管理(8080)的虚拟下线",
 	"E4124": "来自自服务(8800)的虚拟下线",
-	"E2531": "用户不存在",
+	"E2531": "Account not exist",
 	"E2532": "两次认证的间隔太短",
 	"E2533": "尝试次数过于频繁",
 	"E2534": "有代理行为被暂时禁用",
 	"E2535": "认证系统已关闭",
 	"E2536": "系统授权已过期",
-	"E2553": "密码错误",
+	"E2553": "Wrong password",
 	"E2601": "不是专用客户端",
 	"E2606": "用户被禁用",
 	"E2611": "MAC绑定错误",
@@ -54,7 +54,7 @@ var PortalError = map[string]string{
 	"E2613": "NAS PORT绑定错误",
 	"E2614": "VLAN ID绑定错误",
 	"E2615": "IP绑定错误",
-	"E2616": "已欠费",
+	"E2616": "No money",
 	"E2620": "已经在线了",
 	"E2806": "找不到符合条件的产品",
 	"E2807": "找不到符合条件的计费策略",
