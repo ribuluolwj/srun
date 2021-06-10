@@ -1,7 +1,7 @@
 # GOOS：darwin、freebsd、linux、windows
 # GOARCH：386、amd64、arm、s390x
 
-all: darwin
+all: linux
 
 publish:
 	CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o bin/srun-mac ./cmd/srun

@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	log "github.com/sirupsen/logrus"
-	"github.com/vouv/srun/model"
+	"github.com/ribuluolwj/srun/model"
 	"os"
 	"os/user"
 	"path/filepath"

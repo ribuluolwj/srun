@@ -1,4 +1,4 @@
-module github.com/vouv/srun
+module github.com/ribuluolwj/srun
 
 go 1.15
 

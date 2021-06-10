@@ -11,8 +11,8 @@ import (
 	"github.com/moby/moby/pkg/term"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	"github.com/vouv/srun/core"
-	"github.com/vouv/srun/store"
+	"github.com/ribuluolwj/srun/core"
+	"github.com/ribuluolwj/srun/store"
 )
 
 func Login(cmd *cobra.Command, args []string) {
@@ -27,12 +27,12 @@ func LoginE(cmd *cobra.Command, args []string) error {
 	if err != nil {
 		return err
 	}
-	log.Info("尝试登录...")
+	log.Info("Try lonin...")
 
 	if err = core.Login(account); err != nil {
 		return err
 	}
-	log.Info("登录成功!")
+	log.Info("Login succesed!")
 
 	return store.WriteAccount(account)
 }
@@ -53,7 +53,7 @@ func LogoutE(cmd *cobra.Command, args []string) error {
 
 	_ = core.Logout(account)
 
-	log.Info("注销成功!")
+	log.Info("Logoff succeed!")
 
 	return store.WriteAccount(account)
 }
